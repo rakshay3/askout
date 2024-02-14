@@ -98,3 +98,6 @@ body {
     transition: background-color 0.3s ease;
     box-shadow: 0 3px 3px black;
 }
+sub{
+     font-size: xx-small;
+}
