@@ -1,0 +1,85 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Outfit';
+    background: linear-gradient(#ffdad5,#fff7f9);
+}
+.c-container{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.c-left{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 20px;
+}
+.c-left-title h2{
+    font-weight: 600;
+    color: #a363aa;
+    font-size: 40px;
+    margin-bottom: 5px;
+}
+.c-left-title hr{
+    border: none;
+    width: 120px;
+    height: 5px;
+    border-radius: 10px;
+    color: #a363aa;
+    margin-bottom: 20px;
+}
+.c-inputs{
+    width:400px;
+    height: 50px;
+    border: none;
+    outline: none;
+    padding-left: 25px;
+    font-weight: 500;
+    color: #666;
+    border-radius: 50px;
+}
+.c-left textarea{
+    height: 150px;
+    padding-top: 15px;
+    padding-right: 300px;
+    border-radius: 20px;
+}
+.c-inputs:focus{
+    border: 2px solid #ff994f;
+}
+.c-inputs::placeholder{
+    color: #a9a9a9;
+}
+.c-left button{
+    display: flex;
+    align-items: center;
+    padding: 15px 30px;
+    color: #fff;
+    gap: 10px;
+    border: none;
+    border-radius: 50px;
+    background:linear-gradient(270deg,#ff994f,#fa6d86) ;
+    cursor: pointer;
+}
+.c-left button img{
+    height: 15px;
+}
+.c-right img{
+    width:500px;
+}
+@media (max-width:800px){
+    .c-inputs{
+        width:80vw;
+    }
+    .c-right{
+        display:none;
+    }
+}
+sub{
+     font-size: xx-small;
+}
