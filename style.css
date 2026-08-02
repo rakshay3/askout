@@ -1,103 +1,134 @@
-body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-  
-    background: linear-gradient(#ffdad5,#fff7f9);
-  }
-  
-  #noButton {
-    position: absolute;
-    margin-left: 150px;
-    transition: 0.5s;
-    margin-top: 30px;
-  }
-  
-  #yesButton {
-    position: absolute;
-    margin-right: 150px;
-    margin-top: 30px;
-  }
-  
-  .header_text {
-    font-family: "Nunito";
-    font-size: 40px;
-    font-weight: bold;
-    text-align: center;
-    color: #000000;
-  }
-  
-  .text {
-    font-family: "Nunito";
-    font-size: 25px;
-    font-weight: bold;
-    color: white;
-    text-align: center;
-    margin-top: 20px;
-    margin-bottom: 0px;
-  }
-  
-  .buttons {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    margin-top: 20px;
-    margin-left: 20px;
-  }
-  
-  .btn {
-    background-color: #017cff;
-    color: white;
-    font-weight: 600;
-    padding: 15px 32px;
-    text-align: center;
-    display: inline-block;
-    font-size: 16px;
-    margin: 4px 2px;
-    cursor: pointer;
-    border: none;
-    border-radius: 12px;
-    transition: background-color 0.3s ease;
-    box-shadow: 0 3px 3px black;
-  }
-  
-  .btn:hover {
-    background-color: #ffffff;
-    color: #017cff;
-  }
-  
-  .gif_container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding-bottom: 20%;
-  }
-  
-  .gif_container2{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
- 
- 
-  .date{
-    background-color: #017cff;
-    color: white;
-    font-weight: 600;
-    padding: 15px 32px;
-    text-align: center;
-    display: inline-block;
-    font-size: 16px;
-    margin-left: 120px;
-    margin-top: 90px;
-    cursor: pointer;
-    border: none;
-    border-radius: 12px;
-    transition: background-color 0.3s ease;
-    box-shadow: 0 3px 3px black;
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
 }
-sub{
-     font-size: xx-small;
+
+body{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    min-height:100vh;
+    background:linear-gradient(#ffdad5,#fff7f9);
+    font-family:"Nunito",sans-serif;
+    padding:20px;
+}
+
+.container{
+    width:100%;
+    max-width:600px;
+    text-align:center;
+}
+
+.header_text{
+    font-size:clamp(28px,5vw,40px);
+    font-weight:bold;
+    color:#000;
+    margin-bottom:20px;
+}
+
+.gif_container,
+.gif_container2{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.gif_container img,
+.gif_container2 img{
+    width:100%;
+    max-width:320px;
+    height:auto;
+}
+
+.buttons{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:30px;
+    margin-top:25px;
+    position:relative;
+    min-height:100px;
+}
+
+.btn{
+    background:#017cff;
+    color:#fff;
+    border:none;
+    border-radius:12px;
+    padding:14px 30px;
+    font-size:16px;
+    font-weight:600;
+    cursor:pointer;
+    box-shadow:0 3px 3px black;
+    transition:.3s;
+}
+
+.btn:hover{
+    background:#fff;
+    color:#017cff;
+}
+
+#yesButton{
+    position:relative;
+}
+
+#noButton{
+    position:absolute;
+    transition:.3s;
+}
+
+.date{
+    margin-top:30px;
+    padding:15px 35px;
+    border:none;
+    border-radius:12px;
+    background:#017cff;
+    color:#fff;
+    font-size:16px;
+    font-weight:600;
+    cursor:pointer;
+    box-shadow:0 3px 3px black;
+    transition:.3s;
+}
+
+.date:hover{
+    background:white;
+    color:#017cff;
+}
+
+/* Mobile */
+
+@media(max-width:600px){
+
+    body{
+        padding:15px;
+    }
+
+    .header_text{
+        font-size:30px;
+    }
+
+    .buttons{
+        gap:20px;
+        min-height:120px;
+    }
+
+    .btn{
+        padding:12px 24px;
+        font-size:15px;
+    }
+
+    .date{
+        width:100%;
+        max-width:280px;
+        margin:30px auto 0;
+        display:block;
+    }
+
+    .gif_container img,
+    .gif_container2 img{
+        max-width:250px;
+    }
+
 }
